@@ -19,15 +19,15 @@ var server = http.createServer(function (req, res) {
       break;
 
     case "/makemkv":
-      res.writeHead(301, { Location: "https://kubiksamek.cz/50030" });
+      res.writeHead(301, { Location: "https://kubiksamek.cz:50030" });
       break;
 
     case "/mkvtoolnix":
-      res.writeHead(301, { Location: "https://kubiksamek.cz/50040" });
+      res.writeHead(301, { Location: "https://kubiksamek.cz:50040" });
       break;
 
     case "/jdownloader":
-      res.writeHead(301, { Location: "https://kubiksamek.cz/50050" });
+      res.writeHead(301, { Location: "https://kubiksamek.cz:50050" });
       break;
 
     case "/homebridge":
