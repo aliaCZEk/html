@@ -3,7 +3,8 @@ var http = require("http");
 var server = http.createServer(function (req, res) {
   switch (req.url) {
     case "/nas":
-      res.writeHead(301, { Location: "https://kubiksamek.cz:50002" });
+      //res.writeHead(301, { Location: "https://kubiksamek.cz:50002" });
+      res.write(`NAS: ${req.url}`);
       break;
 
     case "/plex":
