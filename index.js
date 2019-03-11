@@ -1,8 +1,7 @@
 var http = require("http");
-var url = require("url");
 
 var server = http.createServer(function (req, res) {
-  switch (url.parse(req.url).pathname) {
+  switch (req.url) {
     case "/nas":
       res.writeHead(301, { Location: "https://kubiksamek.cz:50002" });
       break;
@@ -41,7 +40,7 @@ var server = http.createServer(function (req, res) {
 
     default:
       res.writeHead(404);
-      res.write(`Chyba ${url.parse(req.url).pathname}`);
+      res.write(`Chyba ${req.url}`);
       break;
   }
   res.end();
