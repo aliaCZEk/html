@@ -40,6 +40,7 @@ var server = http.createServer(function (req, res) {
 
     default:
       res.writeHead(404);
+      res.write(`Chyba ${req.url}`);
       break;
   }
   res.end();
